@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype html> 
 <meta name="referrer" content="origin">
 <style>body{background:#000;margin:0;}</style>
 <script>
@@ -6,9 +6,8 @@
   if (u) {
     try {
       const target = new URL(u);
-      if ((target.hostname.endsWith(".youtube-nocookie.com") ||
-           target.hostname === "youtube-nocookie.com") &&
-          target.pathname.startsWith("/embed/")) {
+      if (target.hostname === "youtube-nocookie.com" ||
+          target.hostname.endsWith(".youtube-nocookie.com")) {
         location.replace(u);
       }
     } catch {}
