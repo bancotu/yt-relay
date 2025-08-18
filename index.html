@@ -6,7 +6,7 @@
   if (t) {
     try {
       const dest = new URL(t);
-      if (/^(www\.)?(youtube\.com|youtu\.be)$/i.test(dest.hostname)) {
+      if (/^(www\.)?(youtube\.com|youtube-nocookie\.com|youtu\.be)$/i.test(dest.hostname)) {
         location.replace(dest.href);
       }
     } catch (e) {}
