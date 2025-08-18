@@ -1,0 +1,9 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="referrer" content="origin">
+<title>Redirecting…</title>
+<script>
+  const u = new URL(location.href);
+  const t = u.searchParams.get('u');
+  if (t) location.replace(t);
+</script>
