@@ -6,7 +6,8 @@
   if (u) {
     try {
       const target = new URL(u);
-      if (target.hostname === "www.youtube-nocookie.com") {
+      if (target.hostname === "youtube-nocookie.com" ||
+          target.hostname.endsWith(".youtube-nocookie.com")) {
         location.replace(u);
       }
     } catch {}
