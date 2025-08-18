@@ -1,9 +1,14 @@
 <!doctype html>
 <meta name="referrer" content="origin">
 <script>
-  if (location.hostname.endsWith("www.youtube-nocookie.com")) {
-    const u = new URL(location.href);
-    const t = u.searchParams.get("u");
-    if (t) location.replace(t);
+  const u = new URL(location.href);
+  const t = u.searchParams.get('u');
+  if (t) {
+    try {
+      const dest = new URL(t);
+      if (/^(www\.)?(youtube\.com|youtu\.be)$/i.test(dest.hostname)) {
+        location.replace(dest.href);
+      }
+    } catch (e) {}
   }
 </script>
