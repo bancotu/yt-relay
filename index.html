@@ -6,9 +6,8 @@
   if (u) {
     try {
       const target = new URL(u);
-      if ((target.hostname.endsWith(".youtube-nocookie.com") ||
-           target.hostname === "youtube-nocookie.com") &&
-          target.pathname.startsWith("/embed/")) {
+      if (target.hostname.endsWith(".youtube-nocookie.com") ||
+           target.hostname === "youtube-nocookie.com") {
         location.replace(u);
       }
     } catch {}
